@@ -9,11 +9,9 @@ import com.example.demo.web.BaseController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Api(value = "Login", description = "登录相关接口")
 @RestController
@@ -39,6 +37,15 @@ public class LoginController extends BaseController {
 
 
         return ResultUtil.success(userService.getUserInfo(1));
+    }
+
+    @PassLogger
+    @ApiOperation("获取用户列表")
+    @GetMapping("/getUserList")
+    public ResponseVo<UserEntity> getUserList(@ApiParam("page") @RequestParam("page") int page) {
+
+
+        return ResultUtil.success(userService.getUserList(page));
     }
 
 }

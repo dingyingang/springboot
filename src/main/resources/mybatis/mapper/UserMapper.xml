@@ -8,5 +8,8 @@
     <select id="getUserInfo" resultType="com.example.demo.entity.UserEntity">
         select * from tb_user where id = #{userid}
     </select>
+    <select id="getUserList" resultType="com.example.demo.entity.UserEntity">
+        select * from tb_user
+    </select>
 
 </mapper>
