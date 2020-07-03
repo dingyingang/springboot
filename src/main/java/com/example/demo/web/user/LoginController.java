@@ -96,6 +96,7 @@ public class LoginController extends BaseController {
             list.add(userDto);
 
             ExcelUtil.writeExcel(response, list, "信息", "Sheet1", new UserDto());
+
         } catch (IOException e) {
             e.printStackTrace();
         } catch (Exception e) {
