@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>14</java.version>
-		<swagger.version>2.9.2</swagger.version>
+		<swagger.version>2.10.0</swagger.version>
 		<corgi.version>0.4.5</corgi.version>
 	</properties>
 
